@@ -1,10 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>ESL Practice</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
 <body>
-
-<h1>Homepage</h1>
-<p>This will be the home page for the application. It will include tranlatable instructions, a chat box, 
-    and an area to recieve feedback.</p>
-
+    <div class="chatBot">
+        <header>
+            <h2>ESL Practice Bot</h2>
+            <span alt="Close" 
+                  id="cross" 
+                  onclick="cancel()">X</span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat-incoming chat">
+                <p>STARTER MESSAGE</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea rows="0" cols="17"
+                      placeholder="Enter a message..."></textarea>
+            <button id="sendBTN">Send</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
